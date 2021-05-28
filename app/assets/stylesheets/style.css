@@ -1,0 +1,121 @@
+/* リセットCSS */
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+ul,
+li,
+h1,
+h2,
+p,
+div {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN W3", sans-serif;
+  color: #3b4043;
+}
+
+li {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: bottom;
+}
+
+a {
+  text-decoration: none;
+  color: #3b4043;
+}
+
+/* ヘッダー */
+
+.header {
+  background-color: #006600;
+  padding: 20px 80px;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.logo {
+  width: 15vw;
+  height: 15vh;
+}
+
+
+.nav-right {
+  padding: 40px 0;
+}
+
+.nav_btn {
+  border: 1px solid black;
+  padding: 20px 40px;
+  margin: 0 20px;
+  background-color: #00cc00;
+}
+
+/* フォーム周り */
+
+.form__wrapper {
+  text-align: center;
+}
+
+.form__btn{
+  display: inline-block;
+  padding: 0.4em 1.6em;
+  margin: 2.0em 2.0em;
+  font-size: 0.8em;
+  color: #fff;
+  text-decoration: none;
+  user-select: none;
+  background: grey;
+  border: 1px #87CEFA solid;
+  border-radius: 3px;
+  box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.14), 0 1px 2px 0 rgba(0, 0, 0, 0.12);
+  transition: 0.2s ease;
+  cursor: pointer;
+}
+
+/* ボディ */
+
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.menu-list {
+  text-align: center;
+  font-size: 30px;
+}
+
+.menu-item {
+  text-align: center;
+  font-size: 20px;
+}
+
+.photo {
+  margin: 50px 10px;
+  height: 200px;
+  width: 200px;
+}
+
+
+/* フッター */
+.copyright {
+  padding: 40px;
+  text-align: center;
+  background-color: #cc0000;
+}
