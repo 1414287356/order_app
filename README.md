@@ -35,7 +35,7 @@ _ has_many :purchases
 |        Column       |    Type    | options            |
 | ------------------- | ---------- | ------------------ |
 | user                | references | foreign_key: true  |
-| item                | references | foreign_key: true  |
+| menu                | references | foreign_key: true  |
 
 ### Association
 
