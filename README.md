@@ -11,6 +11,7 @@
 ### Association
 
 _ has_many :menus
+
 _ has_many :purchases
 
 
@@ -27,6 +28,7 @@ _ has_many :purchases
 ### Association
 
 _ belongs_to :user
+
 _ has_many :purchases
 
 
@@ -45,4 +47,6 @@ _ has_many :purchases
 ### Association
 
 _ belongs_to :user
+
 _ belongs_to :menu
+
