@@ -10,9 +10,8 @@
 
 ### Association
 
-_ has_many :menus
-
-_ has_many :purchases
+- has_many :menus
+- has_many :purchases
 
 
 ## menus テーブル
@@ -27,9 +26,8 @@ _ has_many :purchases
 
 ### Association
 
-_ belongs_to :user
-
-_ has_many :purchases
+- belongs_to :user
+- has_many :purchases
 
 
 ## carts テーブル
@@ -46,7 +44,6 @@ _ has_many :purchases
 
 ### Association
 
-_ belongs_to :user
-
-_ belongs_to :menu
+- belongs_to :user
+- belongs_to :menu
 
