@@ -5,7 +5,9 @@ class ProductCategory < ActiveHash::Base
     {id:3, name: 'アラカルト'},
     {id:4, name: 'パスタ'},
     {id:5, name: 'メインディッシュ'},
-    {id:6, name: 'デザート'}
+    {id:6, name: 'デザート'},
+    {id:7, name: 'ノンアルドリンク'},
+    {id:8, name: 'ワイン'}
   ]
 
   include ActiveHash::Associations

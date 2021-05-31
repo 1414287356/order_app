@@ -10,5 +10,8 @@ class User < ApplicationRecord
     validates :password_confirmation
   end
 
+  validates :password, length: { minimum:6 }
+  validates :password, confirmation: true
+
   has_many :menus
 end

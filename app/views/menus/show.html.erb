@@ -1,0 +1,36 @@
+<main class="main">
+  <div class="inner">
+    <div class="menu__wrapper">
+      <div class="menu__hedding">
+        <%= @menu.product_name %>
+      </div>
+      <div class="menu__content">
+        <div class="menu__image">
+          <%= image_tag(@menu.image, class: :photo) %>
+        </div>
+        <div class="menu__detail">
+          <p class="detail__title">商品説明</p>
+          <p class="detail__message">
+            <%= @menu.product_description %>
+          </p>
+        </div>
+        <div class="menu__detail">
+          <p class="detail__title">カテゴリー</p>
+          <p class="detail__message">
+            <%= @menu.product_category.name %>
+          </p>
+        </div>
+        <div class="menu__detail">
+          <p class="detail__title">
+            <% if user_signed_in? && current_user != @menu.user %>
+              <%= link_to "購入画面に進む","#", class:"item-btn" %>
+            <% else %>
+              <%= link_to "商品情報を編集する", edit_menu_path(@menu), method: :get, class:"item-btn" %>
+              <%= link_to "商品情報を削除する", menu_path(@menu), method: :delete, class:"item-btn" %>
+            <% end %>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>

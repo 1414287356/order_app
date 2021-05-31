@@ -30,6 +30,11 @@ _ belongs_to :user
 _ has_many :purchases
 
 
+## carts テーブル
+
+
+
+
 ## purchases テーブル
 
 |        Column       |    Type    | options            |
