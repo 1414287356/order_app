@@ -1,0 +1,35 @@
+<%# 料理入力欄 %>
+
+<%= form_with model: @menu, url: menu_path, local: true do |f| %>
+
+  <div class="field">
+    <%= f.label :image, "料理画像" %><br />
+    <%= f.file_field :image, id:"menu_image" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :product_name, "料理名" %><br />
+    <%= f.text_field :product_name, id:"menu_name" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :product_description, "料理説明" %><br />
+    <%= f.text_area :product_description, class: :form__text, id:"menu_product_description" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :product_category_id, "カテゴリー" %><br />
+    <%= f.collection_select(:product_category_id, ProductCategory.all, :id, :name, {}, {class:"select-box", id:"nemu_product_category"}) %>
+  </div>
+
+    <div class="field">
+    <%= f.label :price, "値段" %><br />
+    <%= f.text_field :price, id:"menu_price" %> 円
+  </div>
+
+  <div class="actions">
+    <%= f.submit "保存する", class: :form__btn %>
+  </div>
+<% end %>
+
+<%# /料理入力欄  %>

@@ -1,7 +1,7 @@
 class MenusController < ApplicationController
 before_action :authenticate_user!, except:[:show,:index]
 before_action :set_menu, except:[:index, :new, :create]
-before_action :move_to_root_path, only:[:new]
+before_action :move_to_root_path, only:[:new, :edit, :destroy]
 
   def index
     @menu = Menu.all
@@ -28,13 +28,16 @@ before_action :move_to_root_path, only:[:new]
 
   def update
     if @menu.update(menu_params)
-      redirect_to :show
+      render :show
     else
       render :edit
     end
   end
 
   def destroy
+    if @menu.destroy
+      redirect_to root_path
+    end
   end
 
   private
@@ -47,7 +50,7 @@ before_action :move_to_root_path, only:[:new]
     @menu = Menu.find(params[:id])
   end
 
-# 管理者以外出品不可にする
+# 管理者以外出品・編集・削除不可にする
   def move_to_root_path
     if current_user.id != 1
       redirect_to root_path
