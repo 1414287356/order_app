@@ -74,7 +74,33 @@
 
 ## carts テーブル
 
+|        Column          |    Type    | options                       |
+|:----------------------:|:----------:|:-----------------------------:|
+| product_name           | string     | null: false                   |
+| product_description    | text       | null: false                   |
+| product_category_id    | integer    | null: false                   |
+| price                  | integer    | null: false                   |
+| user                   | references | foreign_key: true             |
 
+### Association
+
+- 
+
+
+## carts_menus テーブル
+
+|        Column          |    Type    | options                       |
+|:----------------------:|:----------:|:-----------------------------:|
+| product_name           | string     | null: false                   |
+| product_description    | text       | null: false                   |
+| product_category_id    | integer    | null: false                   |
+| price                  | integer    | null: false                   |
+| user                   | references | foreign_key: true             |
+
+### Association
+
+- has_many :carts
+- has_many :menus
 
 
 ## purchases テーブル

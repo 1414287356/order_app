@@ -86,32 +86,6 @@ a {
   cursor: pointer;
 }
 
-/* ボディ */
-
-.menu {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-
-}
-
-.menu-list {
-  text-align: center;
-  font-size: 30px;
-}
-
-.menu-image {
-  text-align: center;
-  font-size: 20px;
-}
-
-.photo {
-  margin: 50px 10px;
-  height: 200px;
-  width: 200px;
-}
-
 /* 詳細ページ */
 .menu__hedding {
   text-align: center;
@@ -121,19 +95,15 @@ a {
 .menu__content {
   display: flex;
   justify-content: space-around;
+  padding: 50px 0 150px 0;
 }
 
 .menu__detail {
-  padding: 100px 0 ;
+  padding: 100px 0;
 }
 
 .detail__title {
   border-bottom: 2px solid black;
 }
 
-/* フッター */
-.copyright {
-  padding: 40px;
-  text-align: center;
-  background-color: #d62828;
-}
+
