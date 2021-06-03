@@ -10,6 +10,7 @@ class Menu < ApplicationRecord
   validates :product_category_id, numericality: { other_than: 1, message: 'is invalid.'}
 
   belongs_to :user
+  has_many :cart_menus, dependent: :destroy
   has_one_attached :image
 
   extend ActiveHash::Associations::ActiveRecordExtensions

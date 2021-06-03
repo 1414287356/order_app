@@ -54,6 +54,7 @@
 
 - has_many :menus
 - has_many :purchases
+- has_one :cart, dependent: :destroy
 
 
 ## menus テーブル
@@ -69,6 +70,7 @@
 ### Association
 
 - belongs_to :user
+- has_many :cart_menus, dependent: :destroy
 - has_many :purchases
 
 
@@ -84,7 +86,9 @@
 
 ### Association
 
-- 
+- belongs_to :user
+- has_many :menus, through: :cart_menus
+- has_many :cart_menus, dependent: destroy
 
 
 ## carts_menus テーブル
@@ -99,8 +103,8 @@
 
 ### Association
 
-- has_many :carts
-- has_many :menus
+- belongs_to :carts
+- belongs_to :menus
 
 
 ## purchases テーブル

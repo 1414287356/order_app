@@ -14,4 +14,5 @@ class User < ApplicationRecord
   validates :password, confirmation: true
 
   has_many :menus
+  has_one :cart, dependent: :destroy
 end
