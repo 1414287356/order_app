@@ -4,13 +4,13 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable
 
-  with_options presence: true  do
+  with_options presence: true do
     validates :nickname
     validates :password
     validates :password_confirmation
   end
 
-  validates :password, length: { minimum:6 }
+  validates :password, length: { minimum: 6 }
   validates :password, confirmation: true
 
   has_many :menus

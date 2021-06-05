@@ -1,5 +1,4 @@
 class Menu < ApplicationRecord
-
   with_options presence: true do
     validates :product_name
     validates :product_description
@@ -7,7 +6,7 @@ class Menu < ApplicationRecord
     validates :price
   end
 
-  validates :product_category_id, numericality: { other_than: 1, message: 'is invalid.'}
+  validates :product_category_id, numericality: { other_than: 1, message: 'is invalid.' }
 
   belongs_to :user
   has_many :cart_menus, dependent: :destroy
